@@ -8,6 +8,10 @@
     "allowJs": true,
     "moduleResolution": "node",
     "esModuleInterop": true,
+    "baseUrl": ".",
+    "paths": {
+      "*": ["./src/*"]
+    },
     "allowSyntheticDefaultImports": true
   },
   "ts-node": {
