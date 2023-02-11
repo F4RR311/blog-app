@@ -8,5 +8,6 @@ export function buildDevServer(options: BuildOptions): DevServerConfiguration {
         open: true,
         // что бы при обновлении не было ошибки на главной странице
         historyApiFallback:true,
+        hot:true
     }
 }
