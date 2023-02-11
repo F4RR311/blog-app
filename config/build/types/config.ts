@@ -7,7 +7,7 @@ export interface BuildPaths {
     src: string
 }
 
-export interface  BuildOptions{
+export interface BuildOptions{
 mode:BuildMode;
 paths: BuildPaths;
 isDev:boolean;
