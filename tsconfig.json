@@ -26,7 +26,7 @@
     // console.log(Moment);
     "esModuleInterop": true,
     // Если какая-либо библиотека не имеет default import,
-    // лоадеры вроде ts-loader или babel-loader автоматически создают их
+    // лоадеры вроде setupTests.ts-loader или babel-loader автоматически создают их
     // вместо такого импорта
     // import * as React from 'react';
     // можно писать такой
@@ -37,5 +37,8 @@
     "compilerOptions": {
       "module": "CommonJS"
     }
-  }
+  },
+  "include": [
+    "./config/jest/setupTests.ts"
+  ]
 }

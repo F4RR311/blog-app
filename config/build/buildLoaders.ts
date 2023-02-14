@@ -60,7 +60,7 @@ export function buildLoaders({ isDev }: BuildOptions): webpack.RuleSetRule[] {
     // Если не используем тайпскрипт, то понадобится бэйбл
     const typescriptLoader = {
         test: /\.tsx?$/,
-        use: 'ts-loader',
+        use: 'setupTests.ts-loader',
         exclude: /node_modules/,
 
     };
