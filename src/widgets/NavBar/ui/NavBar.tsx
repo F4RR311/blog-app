@@ -7,7 +7,7 @@ interface NavBarProps {
     className?: string
 }
 
-export const NavBar = () => (
+export const NavBar = ({ className }:NavBarProps) => (
     <div className={classNames(cls.Navbar, {}, [])}>
 
         <div className={cls.links}>

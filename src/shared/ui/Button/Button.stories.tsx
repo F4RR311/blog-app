@@ -3,6 +3,8 @@ import { ComponentStory, ComponentMeta } from '@storybook/react';
 
 import { Button, ThemeButton } from './Button';
 import 'app/styles/index.scss';
+import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator/ThemeDecorator';
+import { Theme } from 'app/providers/ThemeProvider';
 
 export default {
     title: 'shared/Button',
@@ -26,8 +28,17 @@ Clear.args = {
     children: 'Text',
     theme: ThemeButton.CLEAR,
 };
+
 export const Outlined = Template.bind({});
 Outlined.args = {
     children: 'Text',
     theme: ThemeButton.OUTLINE,
 };
+
+export const OutlinedDArk = Template.bind({});
+OutlinedDArk.args = {
+    children: 'Text',
+    theme: ThemeButton.OUTLINE,
+};
+
+OutlinedDArk.decorators = [ThemeDecorator(Theme.DARK)];
