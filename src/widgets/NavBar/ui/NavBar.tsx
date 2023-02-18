@@ -11,6 +11,7 @@ export const NavBar = ({ className }:NavBarProps) => (
     <div className={classNames(cls.Navbar, {}, [className])}>
 
         <div className={cls.links}>
+            {/* eslint-disable-next-line i18next/no-literal-string */}
             <AppLink theme={AppLinkTheme.SECONDARY} className={cls.mainLink} to="/">
                 Главная страница
             </AppLink>
