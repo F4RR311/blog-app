@@ -8,12 +8,13 @@ interface NavBarProps {
 }
 
 export const NavBar = ({ className }:NavBarProps) => (
-    <div className={classNames(cls.Navbar, {}, [])}>
+    <div className={classNames(cls.Navbar, {}, [className])}>
 
         <div className={cls.links}>
             <AppLink theme={AppLinkTheme.SECONDARY} className={cls.mainLink} to="/">
                 Главная страница
             </AppLink>
+            {/* eslint-disable-next-line i18next/no-literal-string */}
             <AppLink theme={AppLinkTheme.SECONDARY} to="/about">
                 О сайте
             </AppLink>
