@@ -2,9 +2,9 @@ name: linting, testing, building
 run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
 on:
   push:
-    branches: [ master ]
+    branches: [ main ]
     pull_request:
-      branches: [ master ]
+      branches: [ main ]
 jobs:
   pipeline:
     runs-on: unbutu-latest
@@ -26,15 +26,12 @@ jobs:
             - name: build production project
             run: npm run build:prod
 
-      - name: linting typescript
-          run: npm run lint:ts
+        - name: linting typescript
+            run: npm run lint:ts
 
-            - name: linting css
-                run: npm run lint:scss
+              - name: linting css
+                  run: npm run lint:scss
 
-    - name: unit testing
-        run: npm run test:unit
-
-#          - name: unit testing
-#              run: npm run test:unit
+      - name: unit testing
+          run: npm run test:unit
 
