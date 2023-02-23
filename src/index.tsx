@@ -6,15 +6,18 @@ import 'app/styles/index.scss';
 import './shared/config/i18n/i18n';
 // eslint-disable-next-line import/order
 import ErroBoundary from 'app/providers/ErrorBoundary/ui/ErroBoundary';
+import { StoreProvider } from 'app/providers/StoreProvider';
 
 render(
-    <BrowserRouter>
-        <ErroBoundary>
-            <ThemeProvider>
-                <App />
-            </ThemeProvider>
-        </ErroBoundary>
+    <StoreProvider>
+        <BrowserRouter>
+            <ErroBoundary>
+                <ThemeProvider>
+                    <App />
+                </ThemeProvider>
+            </ErroBoundary>
 
-    </BrowserRouter>,
+        </BrowserRouter>
+    </StoreProvider>,
     document.getElementById('root'),
 );
