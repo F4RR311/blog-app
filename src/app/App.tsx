@@ -8,7 +8,7 @@ import { Sidebar } from 'widgets/SideBar';
 const App = () => {
     const { theme } = useTheme();
     return (
-        <div className={classNames('app', {}, [theme])}>
+        <div className={classNames('app', {}, [])}>
             <Suspense fallback="">
                 <NavBar />
 
