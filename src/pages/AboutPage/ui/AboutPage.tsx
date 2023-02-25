@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 
 const AboutPage = () => {
+    const a = useState();
     const { t } = useTranslation('about');
     return (
         <div>

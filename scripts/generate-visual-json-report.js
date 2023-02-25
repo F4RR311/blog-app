@@ -9,7 +9,6 @@ const lokiDir = joinPath(__dirname, '..', '.loki');
 const actualDir = joinPath(lokiDir, 'current');
 const expectedDir = joinPath(lokiDir, 'reference');
 const diffDir = joinPath(lokiDir, 'difference');
-
 (async function main() {
     const diffs = await asyncReaddir(diffDir);
 

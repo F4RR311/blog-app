@@ -6,3 +6,9 @@
     justify-content: center;
     flex-direction: column;
 }
+
+.ff {
+    display: flex;
+    align-content: baseline;
+    color: var(--bg-color)
+}
