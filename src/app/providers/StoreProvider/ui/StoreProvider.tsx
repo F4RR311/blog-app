@@ -5,22 +5,21 @@ import { StateSchema } from 'app/providers/StoreProvider/config/StateSchema';
 import { DeepPartial } from '@reduxjs/toolkit';
 
 interface StoreProviderProps {
-   children?: ReactNode;
-   initialState?: DeepPartial<StateSchema>;
+    children?: ReactNode;
+    initialState?: DeepPartial<StateSchema>;
 }
 
-export const StoreProvider = (props:StoreProviderProps) => {
+export const StoreProvider = (props: StoreProviderProps) => {
     const {
         children,
         initialState,
     } = props;
 
     const store = createReduxStore(initialState as StateSchema);
-    return (
 
+    return (
         <Provider store={store}>
             {children}
         </Provider>
-
     );
 };

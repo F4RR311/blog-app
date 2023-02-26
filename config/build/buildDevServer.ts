@@ -5,7 +5,6 @@ export function buildDevServer(options: BuildOptions): DevServerConfiguration {
     return {
         port: options.port,
         open: true,
-        // что бы при обновлении не было ошибки на главной странице
         historyApiFallback: true,
         hot: true,
     };

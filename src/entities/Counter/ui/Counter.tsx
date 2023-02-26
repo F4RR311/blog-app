@@ -1,39 +1,37 @@
+import { Button } from 'shared/ui/Button/Button';
 import { useDispatch, useSelector } from 'react-redux';
 import { useTranslation } from 'react-i18next';
-import { getCounterValue } from '../model/selectors/getCounerValue/getCounterValue';
 import { counterActions } from '../model/slice/counterSlice';
+import { getCounterValue } from '../model/selectors/getCounterValue/getCounterValue';
 
-interface CounterProps {
-
-}
-
-export const Counter = (props: CounterProps) => {
-    const dispach = useDispatch();
-    const { t } = useTranslation();
+export const Counter = () => {
+    const dispatch = useDispatch();
     const counterValue = useSelector(getCounterValue);
+    const { t } = useTranslation();
+
     const increment = () => {
-        dispach(counterActions.increment());
+        dispatch(counterActions.increment());
     };
+
     const decrement = () => {
-        dispach(counterActions.decrement());
+        dispatch(counterActions.decrement());
     };
+
     return (
         <div>
-            <h1 data-testid="value-title">
-                {counterValue}
-            </h1>
-            <button
-                data-testid="increment-btn"
+            <h1 data-testid="value-title">{counterValue}</h1>
+            <Button
                 onClick={increment}
+                data-testid="increment-btn"
             >
                 {t('increment')}
-            </button>
-            <button
+            </Button>
+            <Button
                 data-testid="decrement-btn"
                 onClick={decrement}
             >
                 {t('decrement')}
-            </button>
+            </Button>
         </div>
     );
 };
