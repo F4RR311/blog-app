@@ -46,7 +46,7 @@ export const LoginForm = memo(({ className }: LoginFormProps) => {
                 autofocus
                 type="text"
                 className={cls.input}
-                placeholder={t('Введите username')}
+                placeholder={t('Введите логин')}
                 onChange={onChangeUsername}
                 value={username}
             />
