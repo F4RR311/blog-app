@@ -19,6 +19,6 @@ export function createReduxStore(initialState?: StateSchema) {
     });
 
     // @ts-ignore
-    store.replaceReducer = reducerManager;
+    store.reducerManager = reducerManager;
     return store;
 }

@@ -28,7 +28,6 @@ const LoginForm = memo(({ className }: LoginFormProps) => {
     const error = useSelector(getLoginError);
 
     useEffect(() => {
-        // TODO FuckinG Bugg. Must to fix!!!!!
         store.reducerManager.add('loginForm', loginReducer);
         dispatch({ type: '@INIT loginForm reducer' });
         return () => {
