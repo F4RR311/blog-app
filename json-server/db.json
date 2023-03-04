@@ -25,5 +25,19 @@
       "password": "123"
     }
   ],
-  "profile": { "name": "typicode" }
+  "profile": {
+        "first": "Valeri",
+        "lastname": "Leontev",
+    "age": 26,
+    "currency" : "RUB",
+    "counter": "Russia",
+    "city": "Rybinsk",
+    "username" : "admin",
+    "avatar": "https://vk.com/fucking.selfish?z=photo62601105_457240432%2Falbum62601105_0%2Frev"
+
+
+
+
+
+  }
 }
