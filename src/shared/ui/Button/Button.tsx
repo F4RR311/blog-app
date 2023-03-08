@@ -1,4 +1,4 @@
-import { classNames } from 'shared/lib/classNames/classNames';
+import { classNames, Mods } from 'shared/lib/classNames/classNames';
 import { ButtonHTMLAttributes, FC } from 'react';
 import cls from './Button.module.scss';
 
@@ -26,7 +26,7 @@ export const Button: FC<ButtonProps> = (props) => {
     const {
         className,
         children,
-        theme,
+        theme = ButtonTheme.OUTLINE,
         square,
         disabled,
         size = ButtonSize.M,
@@ -34,7 +34,7 @@ export const Button: FC<ButtonProps> = (props) => {
 
     } = props;
 
-    const mods: Record<string, boolean> = {
+    const mods:Mods = {
         [cls[theme]]: true,
         [cls.square]: square,
         [cls.disabled]: disabled,
