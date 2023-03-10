@@ -26,18 +26,13 @@
     }
   ],
   "profile": {
-        "first": "Valeri",
-        "lastname": "Leontev",
+    "first": "Valeri",
+    "lastname": "Leontev",
     "age": 26,
-    "currency" : "RUB",
+    "currency": "RUB",
     "country": "Russia",
     "city": "Rybinsk",
-    "username" : "admin",
+    "username": "admin",
     "avatar": "https://vk.com/fucking.selfish?z=photo62601105_457240432%2Falbum62601105_0%2Frev"
-
-
-
-
-
   }
 }
