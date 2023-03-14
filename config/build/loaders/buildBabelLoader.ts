@@ -1,7 +1,6 @@
 import { BuildOptions } from '../types/config';
 
-export function buildBabelLoader(options: BuildOptions) {
-    const { isDev } = options;
+export function buildBabelLoader({ isDev }: BuildOptions) {
     return {
         test: /\.(js|jsx|tsx)$/,
         exclude: /node_modules/,
@@ -17,7 +16,8 @@ export function buildBabelLoader(options: BuildOptions) {
                             keyAsDefaultValue: true,
                         },
                     ],
-                    isDev && require.resolve('react-refresh/babel')].filter(Boolean),
+
+                ],
             },
         },
     };
