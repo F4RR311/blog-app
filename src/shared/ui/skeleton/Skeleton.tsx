@@ -1,5 +1,4 @@
 import { classNames } from 'shared/lib/classNames/classNames';
-import { useTranslation } from 'react-i18next';
 import { CSSProperties } from 'react';
 import cls from './Skeleton.module.scss';
 
@@ -28,8 +27,6 @@ export const Skeleton = (props: SkeletonProps) => {
         <div
             style={styles}
             className={classNames(cls.Skeleton, {}, [className])}
-        >
-            da
-        </div>
+        />
     );
 };

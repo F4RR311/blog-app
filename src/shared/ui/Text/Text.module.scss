@@ -1,32 +1,51 @@
-.title{
+.title {
   font: var(--font-l);
   color: var(--primary-color);
 }
-.text  {
+
+.text {
   font: var(--font-m);
   color: var(--secondary-color);
 }
 
 
 .error {
-  .title{
+  .title {
     color: var(--red-light);
   }
 
-  .text  {
+  .text {
     color: var(--red-dark);
 
   }
 }
 
-.left{
+.left {
   text-align: left;
 }
 
-.right{
+.right {
   text-align: right;
 }
 
-.center{
+.center {
   text-align: center;
+}
+
+.size_m {
+  .title {
+    font: var(--font-l);
+  }
+  .text {
+    font: var(--font-size-m);
+  }
+}
+
+.size_l {
+  .title {
+    font: var(--font-xl);
+  }
+  .text{
+    font: var(--font-size-l);
+  }
 }
