@@ -123,13 +123,15 @@
       "id": "1",
       "username": "admin",
       "password": "123",
-      "role": "ADMIN"
+      "role": "ADMIN",
+      "avatar": "http://mobimg.b-cdn.net/v3/fetch/f4/f408ef971aa9aa3b83e90d6a17fa23ea.jpeg"
     },
     {
       "id": "2",
       "username": "user",
       "password": "123",
-      "role": "USER"
+      "role": "USER",
+      "avatar": "https://artpostergallery.ru/userdata/image/thumbs/fc/5e/fc5e5775367aed0504fa9524418ed11c_2.jpg"
     }
   ],
   "profile": {
