@@ -11,6 +11,7 @@ import { To } from '@remix-run/router';
 import { NavigateOptions } from 'react-router/dist/lib/context';
 import { ArticleDetailsSchema } from 'entities/Article';
 import { ArticleDetailsCommentsSchema } from 'pages/ArticleDetailsPage';
+import { AddCommentFormSchema } from 'features/addCommentForm';
 
 export interface StateSchema {
     counter: CounterSchema;
@@ -21,6 +22,7 @@ export interface StateSchema {
     profile?: ProfileSchema;
     articleDetails?: ArticleDetailsSchema;
     articleDetailsComments?: ArticleDetailsCommentsSchema;
+    addCommentForm?: AddCommentFormSchema;
 }
 
 export type StateSchemaKey = keyof StateSchema;
@@ -38,14 +40,14 @@ export interface ReduxStoreWithManager extends EnhancedStore<StateSchema> {
 
 export interface ThunkExtraArgs {
     api: AxiosInstance;
-    navigate?:(to: To, options?: NavigateOptions)=> void
+    navigate?: (to: To, options?: NavigateOptions) => void;
 
 }
 
-export interface ThunkConfig<T>{
+export interface ThunkConfig<T> {
     rejectValue: T;
     extra: ThunkExtraArgs;
     dispatch?: Dispatch;
-    state:StateSchema;
+    state: StateSchema;
 
 }

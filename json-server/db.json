@@ -19,7 +19,9 @@
       "img": "https://teknotower.com/wp-content/uploads/2020/11/js.png",
       "views": 1022,
       "createdAt": "26.02.2022",
-      "type": ["IT"],
+      "type": [
+        "IT"
+      ],
       "blocks": [
         {
           "id": "1",
@@ -116,6 +118,42 @@
       "text": "some comment 3",
       "articleId": "1",
       "userId": "1"
+    },
+    {
+      "articleId": "1",
+      "userId": "1",
+      "text": "12135sgd",
+      "id": "ERlpzLw"
+    },
+    {
+      "articleId": "1",
+      "userId": "1",
+      "text": "wfawfaf",
+      "id": "djLqsy7"
+    },
+    {
+      "articleId": "1",
+      "userId": "2",
+      "text": "asfaf",
+      "id": "oelCKZl"
+    },
+    {
+      "articleId": "1",
+      "userId": "2",
+      "text": "privet mir",
+      "id": "aHUWZmX"
+    },
+    {
+      "articleId": "1",
+      "userId": "2",
+      "text": "32131",
+      "id": "uqJifd8"
+    },
+    {
+      "articleId": "1",
+      "userId": "2",
+      "text": "fafafa",
+      "id": "jk8U3Lb"
     }
   ],
   "users": [
@@ -134,14 +172,28 @@
       "avatar": "https://artpostergallery.ru/userdata/image/thumbs/fc/5e/fc5e5775367aed0504fa9524418ed11c_2.jpg"
     }
   ],
-  "profile": {
-    "first": "jgh",
-    "lastname": "asf",
-    "age": 465,
-    "currency": "RUB",
-    "country": "Belarus",
-    "city": "Moscow",
-    "username": "admin213",
-    "avatar": "https://yt3.ggpht.com/ytc/AAUvwngFzM_Rf6MNwOnFcuphoj93k7VFjlIrj-kSMxbh=s900-c-k-c0x00ffffff-no-rj"
-  }
+  "profile": [
+    {
+      "id": "1",
+      "first": "jgh",
+      "lastname": "asf",
+      "age": 465,
+      "currency": "RUB",
+      "country": "Belarus",
+      "city": "Moscow",
+      "username": "admin213",
+      "avatar": "https://regnum.ru/uploads/pictures/news/2016/12/18/regnum_picture_1482056699195763_normal.jpg"
+    },
+    {
+      "id": "2",
+      "first": "111111",
+      "lastname": "asf",
+      "age": 465,
+      "currency": "RUB",
+      "country": "Ukraine",
+      "city": "Moscow",
+      "username": "ValerianbI4",
+      "avatar": "https://cq.ru/storage/uploads/posts/961737/fr.jpg"
+    }
+  ]
 }
