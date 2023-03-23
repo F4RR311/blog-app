@@ -10,7 +10,7 @@ describe('Button', () => {
 
     test('Test toggle', () => {
         componentRender(<Sidebar />);
-        const toggleBtn = screen.getByTestId('sidebar-toggle');
+        const toggleBtn = screen.getByTestId('sidebar.ts-toggle');
         expect(screen.getByTestId('sidebar')).toBeInTheDocument();
         fireEvent.click(toggleBtn);
         expect(screen.getByTestId('sidebar')).toHaveClass('collapsed');

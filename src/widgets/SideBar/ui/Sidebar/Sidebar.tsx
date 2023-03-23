@@ -4,7 +4,9 @@ import { ThemeSwitcher } from 'shared/ui/ThemeSwitcher';
 import { LangSwitcher } from 'shared/ui/LangSwitcher/LangSwitcher';
 import { useTranslation } from 'react-i18next';
 import { Button, ButtonSize, ButtonTheme } from 'shared/ui/Button/Button';
-import { SidebarItemsList } from '../../model/items';
+import { useSelector } from 'react-redux';
+import { getSidebarItems } from '../../model/selectors/getSidebarItems';
+
 import { SidebarItem } from '../SidebarItem/SidebarItem';
 import cls from './Sidebar.module.scss';
 
@@ -18,14 +20,15 @@ export const Sidebar = memo(({ className }: SidebarProps) => {
         setCollapsed((prev) => !prev);
     };
     const { t } = useTranslation();
-    const itemList = useMemo(() => SidebarItemsList.map((item) => (
+    const sidebarItemList = useSelector(getSidebarItems);
+    const itemList = useMemo(() => sidebarItemList.map((item) => (
         <SidebarItem
             item={item}
             key={item.path}
             collapsed={collapsed}
 
         />
-    )), [collapsed]);
+    )), [collapsed, sidebarItemList]);
     return (
         <div
             data-testid="sidebar"
