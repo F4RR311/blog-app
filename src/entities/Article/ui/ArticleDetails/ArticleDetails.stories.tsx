@@ -24,6 +24,11 @@ const article: Article = {
     // @ts-ignore
     createdAt: '26.02.2022',
     type: [ArticleType.IT],
+    user: {
+        id:"1",
+        username:"asfsaf",
+        "avatar":"213131"
+    },
     blocks: [
         {
             id: '1',

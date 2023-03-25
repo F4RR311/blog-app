@@ -2,6 +2,7 @@ import { classNames } from 'shared/lib/classNames/classNames';
 import { useTranslation } from 'react-i18next';
 import { memo } from 'react';
 import { Article, ArticleList } from 'entities/Article';
+import { ArticleView } from 'entities/Article/model/types/article';
 import cls from './ArticlesPage.module.scss';
 
 interface ArticlesPageProps {
@@ -16,8 +17,13 @@ const article = {
     img: 'https://teknotower.com/wp-content/uploads/2020/11/js.png',
     views: 1022,
     createdAt: '26.02.2022',
+    user: {
+        id: '1',
+        username: 'Vanya',
+        avatar: 'https://regnum.ru/uploads/pictures/news/2016/12/18/regnum_picture_1482056699195763_normal.jpg',
+    },
     type: [
-        'IT',
+        'IT', 'ECONOMICS',
     ],
     blocks: [
         {
@@ -100,9 +106,21 @@ const article = {
 
 const ArticlesPage = ({ className }: ArticlesPageProps) => {
     const { t } = useTranslation();
+
     return (
         <div className={classNames(cls.ArticlesPage, {}, [className])}>
-            <ArticleList articles={[article]} />
+            <ArticleList
+                view={ArticleView.BIG}
+
+                articles={
+                    new Array(16)
+                        .fill(0)
+                        .map((item, index) => ({
+                            ...article,
+                            id: String(index),
+                        }))
+                }
+            />
         </div>
     );
 };

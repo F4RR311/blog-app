@@ -22,9 +22,13 @@ const article: Article = {
     subtitle: 'Что нового в JS за 2022 год?',
     img: 'https://teknotower.com/wp-content/uploads/2020/11/js.png',
     views: 1022,
-    // @ts-ignore
     createdAt: '26.02.2022',
     type: [ArticleType.IT],
+    user: {
+        id: '1',
+        username: 'asfsaf',
+
+    },
     blocks: [
         {
             id: '1',
@@ -61,3 +65,4 @@ Normal.decorators = [StoreDecorator({
         data: article,
     },
 })];
+
