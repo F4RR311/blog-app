@@ -74,6 +74,8 @@ export const ArticleDetails = memo((props: ArticleDetailsProps) => {
                 />
             );
         case ArticleBlockType.TEXT:
+
+
             return (
                 <ArticleTextBlockComponent
                     key={block.id}
