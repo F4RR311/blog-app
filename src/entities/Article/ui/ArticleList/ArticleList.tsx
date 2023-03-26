@@ -28,17 +28,6 @@ export const ArticleList = (props: ArticleListProps) => {
 
     const { t } = useTranslation();
 
-    if (isLoading) {
-        return (
-            <div className={classNames(cls.ArticleList, {}, [className, cls[view]])}>
-                {
-                    getSkeletons(view)
-                }
-
-            </div>
-
-        );
-    }
     const renderArticleList = (article: Article) => (
         <ArticleListItem className={cls.card} article={article} view={view} key={article.id} />
     );
@@ -47,6 +36,7 @@ export const ArticleList = (props: ArticleListProps) => {
             {articles.length > 0
                 ? articles.map(renderArticleList)
                 : null}
+            {isLoading && getSkeletons(view)}
         </div>
     );
 };
