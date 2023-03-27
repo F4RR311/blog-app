@@ -33,6 +33,7 @@ export const CommentList = (props: CommentListProps) => {
                     <CommentCard
                         className={cls.comment}
                         comment={comment}
+                        key={comment.id}
                     />
                 ))
                 : <Text text={t('Комментарии отсутствуют')} />}

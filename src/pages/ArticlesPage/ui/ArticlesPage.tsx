@@ -8,9 +8,13 @@ import { useInitialEffect } from 'shared/lib/hooks/useInitialEffect/useInitialEf
 import { useSelector } from 'react-redux';
 import { ArticleView } from 'entities/Article/model/types/article';
 import { Page } from 'shared/ui/Page/Page';
-import { fetchNextArticlePage } from 'pages/ArticlesPage/model/services/fetchNextArticlePage/fetchNextArticlePage';
-import { fetchArticleList } from '../model/services/fetchArticleList/fetchArticleList';
-import { getArticlesPageIsLoading, getArticlesPageView } from '../model/selectors/articlesPageSelectors';
+import { fetchNextArticlePage } from '../model/services/fetchNextArticlePage/fetchNextArticlePage';
+import { initArticlesPage } from '../model/services/initArticlesPage/initArticlesPage';
+import {
+    getArticlesPageInited,
+    getArticlesPageIsLoading,
+    getArticlesPageView,
+} from '../model/selectors/articlesPageSelectors';
 import cls from './ArticlesPage.module.scss';
 import { articlesPageActions, articlesPageReducer, getArticles } from '../model/slices/articlePageSlice';
 
@@ -29,7 +33,7 @@ const ArticlesPage = ({ className }: ArticlesPageProps) => {
     const articles = useSelector(getArticles.selectAll);
     const isLoading = useSelector(getArticlesPageIsLoading);
     const view = useSelector(getArticlesPageView);
-
+    const inited = useSelector(getArticlesPageInited);
     const onChangeView = useCallback((view:ArticleView) => {
         dispatch(articlesPageActions.setView(view));
     }, [dispatch]);
@@ -39,14 +43,11 @@ const ArticlesPage = ({ className }: ArticlesPageProps) => {
     }, [dispatch]);
 
     useInitialEffect(() => {
-        dispatch(articlesPageActions.initialState());
-        dispatch(fetchArticleList({
-            page: 1,
-        }));
+        dispatch(initArticlesPage());
     });
 
     return (
-        <DynamicModuleLoader reducers={reducers}>
+        <DynamicModuleLoader reducers={reducers} removeAfterUnmount={false}>
             <Page
                 onScrollEnd={onLoadNextPart}
                 className={classNames(cls.ArticlesPage, {}, [className])}
