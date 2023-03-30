@@ -77,6 +77,7 @@ const articlesPageSlice = createSlice({
             ) => {
                 state.isLoading = false;
                 state.hasMore = action.payload.length > 0;
+
                 if (action.meta.arg.replace) {
                     articlesAdapter.setAll(state, action.payload);
                 } else {
