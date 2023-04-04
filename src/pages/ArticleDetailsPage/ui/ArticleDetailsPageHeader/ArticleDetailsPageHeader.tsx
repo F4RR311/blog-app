@@ -21,9 +21,15 @@ export const ArticleDetailsPageHeader = (props: ArticleDetailsPageHeaderProps) =
     const userData = useSelector(getUserAuthData);
     const article = useSelector(getArticleDetailsData);
     const canEdit = useSelector(getCanEditArticle);
+
     const onBackToList = useCallback(() => {
         navigate(RoutePath.articles);
     }, [navigate]);
+
+    const onEditArticle = useCallback(() => {
+        navigate(`${RoutePath.article_details}${article?.id}/edit`);
+    }, [article?.id, navigate]);
+
     return (
         <div className={classNames(cls.ArticleDetailsPageHeader, {}, [className])}>
             <Button
@@ -37,7 +43,7 @@ export const ArticleDetailsPageHeader = (props: ArticleDetailsPageHeaderProps) =
                 <Button
                     className={cls.editBtn}
                     theme={ButtonTheme.OUTLINE}
-                    onClick={onBackToList}
+                    onClick={onEditArticle}
                 >
                     {t('Редактировать')}
                 </Button>
