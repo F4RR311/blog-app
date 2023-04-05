@@ -1,11 +1,5 @@
-.card {
-  margin-right: 30px;
-  margin-bottom: 30px;
-}
-
 .BIG {
   .card {
-
     margin-bottom: 30px;
   }
 }
@@ -15,4 +9,13 @@
   flex-wrap: wrap;
   gap: 30px;
 
+  .card {
+    display: inline-flex;
+    height: 300px;
+  }
+
+  .row {
+    display: flex;
+    gap: 30px;
+  }
 }
