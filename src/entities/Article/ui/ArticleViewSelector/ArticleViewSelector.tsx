@@ -1,10 +1,10 @@
 import { classNames } from 'shared/lib/classNames/classNames';
 import { useTranslation } from 'react-i18next';
-import { ArticleView } from 'entities/Article/model/types/article';
 import ListIcon from 'shared/assets/icons/bi_list.svg';
 import TilesIcon from 'shared/assets/icons/tiled_list.svg';
 import { Button, ButtonTheme } from 'shared/ui/Button/Button';
 import { Icon } from 'shared/ui/Icon/Icon';
+import { ArticleView } from '../../model/types/article';
 import cls from './ArticleViewSelector.module.scss';
 
 interface ArticleViewSelectorProps {

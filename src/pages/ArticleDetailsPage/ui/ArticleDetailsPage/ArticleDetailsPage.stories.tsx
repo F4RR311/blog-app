@@ -65,4 +65,3 @@ Normal.decorators = [StoreDecorator({
         data: article,
     },
 })];
-

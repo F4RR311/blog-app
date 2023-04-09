@@ -1,8 +1,8 @@
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 import { StoreDecorator } from 'shared/config/storybook/StoreDecorator/StoreDecorator';
-import { Article } from 'entities/Article';
-import { ArticleBlockType, ArticleType } from 'entities/Article/model/types/article';
+import { Article } from '../../../Article';
+import { ArticleBlockType, ArticleType } from '../../model/types/article';
 import { ArticleDetails } from './ArticleDetails';
 
 export default {
@@ -25,9 +25,9 @@ const article: Article = {
     createdAt: '26.02.2022',
     type: [ArticleType.IT],
     user: {
-        id:"1",
-        username:"asfsaf",
-        "avatar":"213131"
+        id: '1',
+        username: 'asfsaf',
+        avatar: '213131',
     },
     blocks: [
         {

@@ -5,9 +5,6 @@ import {
     ReducersList,
 } from 'shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
 import { memo, useCallback, useEffect } from 'react';
-import {
-    fetchArticleById,
-} from 'entities/Article/model/services/fetchArticleById/fetchArticleById';
 import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch';
 import { useSelector } from 'react-redux';
 import { Text, TextAlign, TextSize } from 'shared/ui/Text/Text';
@@ -18,14 +15,17 @@ import CalendarIcon from 'shared/assets/icons/calendar.svg';
 
 import { Icon } from 'shared/ui/Icon/Icon';
 import {
+    fetchArticleById,
+} from '../../model/services/fetchArticleById/fetchArticleById';
+import {
     ArticleCodeBlockComponent,
-} from 'entities/Article/ui/ArticleCodeBlockComponent/ArticleCodeBlockComponent';
+} from '../ArticleCodeBlockComponent/ArticleCodeBlockComponent';
 import {
     ArticleTextBlockComponent,
-} from 'entities/Article/ui/ArticleTextBlockComponent/ArticleTextBlockComponent';
+} from '../ArticleTextBlockComponent/ArticleTextBlockComponent';
 import {
     ArticleImageBlockComponent,
-} from 'entities/Article/ui/ArticleImageBlockComponent/ArticleImageBlockComponent';
+} from '../ArticleImageBlockComponent/ArticleImageBlockComponent';
 import {
     getArticleDetailsData,
     getArticleDetailsError,

@@ -1,7 +1,5 @@
 import React from 'react';
-import { ComponentStory, ComponentMeta } from '@storybook/react';
-import { Skeleton } from 'shared/ui/skeleton/Skeleton';
-import cls from 'entities/Article/ui/ArticleDetails/ArticleDetails.module.scss';
+import { ComponentMeta, ComponentStory } from '@storybook/react';
 import { Code } from './Code';
 
 export default {
