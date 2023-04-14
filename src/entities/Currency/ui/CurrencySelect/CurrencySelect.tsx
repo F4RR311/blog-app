@@ -32,6 +32,9 @@ export const CurrencySelect = memo(({
             items={options}
             defaultValue={t('Укажите валюту')}
             onChange={onChangeHandler}
+            readonly={readonly}
+            direction="top"
+            label={t('Укажите валюту')}
         />
         // <Select
         //     className={classNames('', {}, [className])}
