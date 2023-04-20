@@ -15,6 +15,7 @@ import CalendarIcon from 'shared/assets/icons/calendar.svg';
 
 import { Icon } from 'shared/ui/Icon/Icon';
 import { HStack, VStack } from 'shared/Stack';
+import { ArticleBlockType } from 'entities/Article/model/consts/consts';
 import {
     fetchArticleById,
 } from '../../model/services/fetchArticleById/fetchArticleById';
@@ -34,7 +35,7 @@ import {
 } from '../../model/selectors/articleDetails';
 import cls from './ArticleDetails.module.scss';
 import { articleDetailsReducer } from '../../model/slice/articleDetailsSlice';
-import { ArticleBlock, ArticleBlockType } from '../../model/types/article';
+import { ArticleBlock } from '../../model/types/article';
 
 interface ArticleDetailsProps {
     className?: string;

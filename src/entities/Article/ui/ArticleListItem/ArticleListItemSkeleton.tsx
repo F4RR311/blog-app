@@ -4,7 +4,7 @@ import { Icon } from 'shared/ui/Icon/Icon';
 import EyeIcon from 'shared/assets/icons/eye-visitors.svg';
 import { Card } from 'shared/ui/Card/Card';
 import { Skeleton } from 'shared/ui/skeleton/Skeleton';
-import { ArticleView } from '../../model/types/article';
+import { ArticleView } from 'entities/Article/model/consts/consts';
 import cls from './ArticleListItem.module.scss';
 
 interface ArticleListItemSkeletonProps {

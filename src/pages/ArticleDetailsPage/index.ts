@@ -6,6 +6,6 @@ export {
 }
     from './ui/ArticleDetailsPage/ArticleDetailsPage.async';
 
-export { ArticleDetailsCommentsSchema } from './model/types/ArticleDetailsCommentsSchema';
-export { ArticleDetailsPageRecommendationsSchema } from './model/types/articleDetailsPageRecommendationsSchema';
-export { ArticleDetailsPageSchema } from './model/types';
+export type { ArticleDetailsCommentsSchema } from './model/types/ArticleDetailsCommentsSchema';
+export type { ArticleDetailsPageRecommendationsSchema } from './model/types/articleDetailsPageRecommendationsSchema';
+export type { ArticleDetailsPageSchema } from './model/types';
