@@ -10,7 +10,7 @@ import { HTMLAttributeAnchorTarget, useCallback } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { RoutePath } from 'shared/config/routeConfig/routeConfig';
 import { AppLink } from 'shared/ui/AppLink/AppLink';
-import { ArticleBlockType, ArticleView } from 'entities/Article/model/consts/consts';
+import { ArticleBlockType, ArticleView } from '../../model/consts/artilceConsts';
 import { ArticleTextBlockComponent } from '../ArticleTextBlockComponent/ArticleTextBlockComponent';
 import {
     Article, ArticleTextBlock,

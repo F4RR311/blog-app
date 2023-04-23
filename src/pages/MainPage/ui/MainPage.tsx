@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { HStack } from 'shared/Stack';
-import { ListBox } from 'shared/ui/ListBox/ListBox';
+import { ListBox } from 'shared/ui/Popups/components/ListBox/ListBox';
 import { Page } from 'widgets/Page/Page';
 
 const MainPage = () => {
@@ -17,7 +17,6 @@ const MainPage = () => {
 
             <HStack>
                 <ListBox
-                    defaultValue="asfafasfaf"
                     onChange={(value: string) => {}}
                     value={undefined}
                     items={[
@@ -28,12 +27,6 @@ const MainPage = () => {
                     ]}
                 />
             </HStack>
-            <div>safafsafa</div>
-            <div>safafsafa</div>
-            <div>safafsafa</div>
-            <div>safafsafa</div>
-            <div>safafsafa</div>
-            <div>safafsafa</div>
 
         </Page>
 

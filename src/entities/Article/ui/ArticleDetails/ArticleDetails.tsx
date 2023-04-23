@@ -15,7 +15,7 @@ import CalendarIcon from 'shared/assets/icons/calendar.svg';
 
 import { Icon } from 'shared/ui/Icon/Icon';
 import { HStack, VStack } from 'shared/Stack';
-import { ArticleBlockType } from 'entities/Article/model/consts/consts';
+import { ArticleBlockType } from '../../model/consts/artilceConsts';
 import {
     fetchArticleById,
 } from '../../model/services/fetchArticleById/fetchArticleById';

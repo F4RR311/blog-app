@@ -16,4 +16,4 @@ export { getArticleDetailsData } from './model/selectors/articleDetails';
 export {
     ArticleView, ArticleSortField,
     ArticleType,
-} from './model/consts/consts';
+} from './model/consts/artilceConsts';
