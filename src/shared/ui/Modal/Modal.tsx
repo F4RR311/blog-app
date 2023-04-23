@@ -4,6 +4,7 @@ import React, {
     ReactNode, useCallback, useEffect, useRef, useState,
 } from 'react';
 import { useTheme } from 'app/providers/ThemeProvider';
+import { Overlay } from '../Overlay/Overlay';
 import { Portal } from '../Portal/Portal';
 import cls from './Modal.module.scss';
 
@@ -12,8 +13,9 @@ interface ModalProps {
     children?: ReactNode;
     isOpen?: boolean;
     onClose?: () => void;
-    lazy?:boolean;
+    lazy?: boolean;
 }
+
 const ANIMATION_DELAY = 300;
 
 export const Modal = (props: ModalProps) => {
@@ -27,7 +29,7 @@ export const Modal = (props: ModalProps) => {
 
     const [isClothing, setIsClothing] = useState(false);
     const [isMounted, setIsMounted] = useState(false);
-    const timerRef = useRef() as MutableRefObject<ReturnType<typeof setTimeout >>;
+    const timerRef = useRef() as MutableRefObject<ReturnType<typeof setTimeout>>;
     const { theme } = useTheme();
 
     useEffect(() => {
@@ -45,15 +47,11 @@ export const Modal = (props: ModalProps) => {
         }
     }, [onClose]);
 
-    const onKeyDown = useCallback((e:KeyboardEvent) => {
+    const onKeyDown = useCallback((e: KeyboardEvent) => {
         if (e.key === 'Escape') {
             closeHandler();
         }
     }, [closeHandler]);
-
-    const contentClick = (e: React.MouseEvent) => {
-        e.stopPropagation();
-    };
 
     useEffect(() => {
         if (isOpen) {
@@ -65,7 +63,7 @@ export const Modal = (props: ModalProps) => {
         };
     }, [isOpen, onKeyDown]);
 
-    const mods:Mods = {
+    const mods: Mods = {
         [cls.opened]: isOpen,
         [cls.isClosing]: isClothing,
     };
@@ -76,15 +74,13 @@ export const Modal = (props: ModalProps) => {
     return (
         <Portal>
             <div className={classNames(cls.Modal, mods, [className])}>
-                {/* eslint-disable-next-line jsx-a11y/no-static-element-interactions */}
+                <Overlay onClick={closeHandler} />
                 <div
                     className={cls.overlay}
                     onClick={closeHandler}
                 >
-                    {/* eslint-disable-next-line jsx-a11y/no-static-element-interactions */}
                     <div
                         className={cls.content}
-                        onClick={contentClick}
                     >
                         {children}
                     </div>

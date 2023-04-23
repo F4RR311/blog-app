@@ -19,6 +19,7 @@ import { Icon } from 'shared/ui/Icon/Icon';
 import AlarmIcon from 'shared/assets/icons/alarm.svg';
 import { NotificationList } from 'entities/Notifications';
 import { AvatarDropdown } from 'features/avatarDropdown';
+import { Drawer } from 'shared/ui/Drawer/Drawer';
 import cls from './Navbar.module.scss';
 
 interface NavbarProps {

@@ -7,7 +7,9 @@
   z-index: -1;
   opacity: 0;
   pointer-events: none;
-  color:var(--primary-color)
+  color:var(--primary-color);
+  justify-content: center;
+  align-items: center;
 }
 
 .Modal.dark {
