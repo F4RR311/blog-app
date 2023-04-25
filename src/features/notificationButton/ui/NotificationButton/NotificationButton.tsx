@@ -1,13 +1,13 @@
-import { classNames } from 'shared/lib/classNames/classNames';
-import { Popover } from 'shared/ui/Popups';
-import { Button, ButtonTheme } from 'shared/ui/Button/Button';
-import { Icon } from 'shared/ui/Icon/Icon';
-import AlarmIcon from 'shared/assets/icons/alarm.svg';
-import { NotificationList } from 'entities/Notifications';
 import React, { useCallback, useState } from 'react';
-import { Drawer } from 'shared/ui/Drawer/Drawer';
 import { BrowserView, MobileView } from 'react-device-detect';
-import { AnimationProvider } from 'shared/lib/components/AnimationProvider';
+import { classNames } from '@/shared/lib/classNames/classNames';
+import { Popover } from '@/shared/ui/Popups';
+import { Button, ButtonTheme } from '@/shared/ui/Button/Button';
+import { Icon } from '@/shared/ui/Icon/Icon';
+import AlarmIcon from '@/shared/assets/icons/alarm.svg';
+import { NotificationList } from '@/entities/Notifications';
+import { Drawer } from '@/shared/ui/Drawer/Drawer';
+import { AnimationProvider } from '@/shared/lib/components/AnimationProvider';
 import cls from './NotificationButton.module.scss';
 
 interface NotificationButtonProps {
