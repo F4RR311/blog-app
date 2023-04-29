@@ -10,7 +10,6 @@ import { StarRating } from '@/shared/ui/StarRating/StarRating';
 import { Modal } from '@/shared/ui/Modal/Modal';
 import { Input } from '@/shared/ui/Input/Input';
 import { classNames } from '@/shared/lib/classNames/classNames';
-import cls from './RatingCard.module.scss';
 
 interface RatingCardProps {
     className?: string;
@@ -19,6 +18,7 @@ interface RatingCardProps {
     hasFeedback?:boolean;
     onCancel?:(starsCount:number)=> void;
     onAccept?:(starsCount:number, feedBack?:string)=> void;
+    rate?:number;
 }
 
 export const RatingCard = (props:RatingCardProps) => {
@@ -29,12 +29,13 @@ export const RatingCard = (props:RatingCardProps) => {
         hasFeedback,
         onCancel,
         onAccept,
+        rate = 0,
     } = props;
 
     const { t } = useTranslation();
 
     const [isModalOpen, setIsModalOpen] = useState(false);
-    const [starsCount, setStarsCount] = useState(0);
+    const [starsCount, setStarsCount] = useState(rate);
     const [feedback, setFeedback] = useState('');
 
     const onSelectStars = useCallback((selectedStarsCount:number) => {
@@ -65,10 +66,10 @@ export const RatingCard = (props:RatingCardProps) => {
     );
 
     return (
-        <Card className={classNames(cls.RatingCard, {}, [className])}>
+        <Card max className={classNames('', {}, [className])}>
             <VStack align="center" gap="8">
-                <Text title={title} />
-                <StarRating size={40} onSelect={onSelectStars} />
+                <Text title={starsCount ? t('спасибо за оценку') : title} />
+                <StarRating selectedStars={starsCount} size={40} onSelect={onSelectStars} />
             </VStack>
             <BrowserView>
                 <Modal isOpen={isModalOpen} lazy>

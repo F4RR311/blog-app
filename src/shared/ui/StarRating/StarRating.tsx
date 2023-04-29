@@ -23,7 +23,7 @@ export const StarRating = (props: StarRatingProps) => {
     } = props;
     const { t } = useTranslation();
 
-    const [currentStarsCount, setCurrentStarCount] = useState(0);
+    const [currentStarsCount, setCurrentStarCount] = useState(selectedStars);
     const [isSelected, setIsSelected] = useState(Boolean(selectedStars));
 
     const onHover = (starsCount:number) => () => {
