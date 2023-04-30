@@ -14,6 +14,11 @@ export default ({ config }: {config: webpack.Configuration}) => {
     };
     config!.resolve!.modules!.push(paths.src);
     config!.resolve!.extensions!.push('.ts', '.tsx');
+    config!.resolve!.alias = {
+        ...config!.resolve!.alias,
+        '@': paths.src,
+
+    };
 
     /* исправление ошибки storybook */
     if (config!.resolve!.modules) {
