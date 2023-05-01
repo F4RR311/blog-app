@@ -69,7 +69,12 @@ module.exports = {
         'react/no-array-index-key': 'off',
         'arrow-body-style': 'off',
         'f4rr311-plugin/path-checker': ['error', { alias: '@' }],
-        'f4rr311-plugin/public-api-imports': ['error', { alias: '@' }],
+        'f4rr311-plugin/public-api-imports': ['error',
+            {
+                alias: '@',
+                testFilesPatterns: ['**/*.test.*', '**/*.story.*', '**/StoreDecorator.tsx'],
+            },
+        ],
     },
     globals: {
         __IS_DEV__: true,
