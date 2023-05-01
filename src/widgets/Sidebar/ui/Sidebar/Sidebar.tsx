@@ -1,9 +1,9 @@
 import React, { memo, useMemo, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useSelector } from 'react-redux';
+import { LangSwitcher } from '@/widgets/LangSwitcher';
 import { classNames } from '@/shared/lib/classNames/classNames';
 import { ThemeSwitcher } from '@/widgets/ThemeSwitcher';
-import { LangSwitcher } from '@/widgets/LangSwitcher/LangSwitcher';
 import { Button, ButtonSize, ButtonTheme } from '@/shared/ui/Button/Button';
 import { VStack } from '@/shared/Stack/VStack/VStack';
 import { getSidebarItems } from '../../model/selectors/getSidebarItems';

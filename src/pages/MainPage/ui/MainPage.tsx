@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
+import { Page } from '@/widgets/Page';
 import { RatingCard } from '@/entities/Rating';
-import { Page } from '@/widgets/Page/Page';
 
 const MainPage = () => {
     const { t } = useTranslation('main');
@@ -14,8 +14,8 @@ const MainPage = () => {
         <Page>
             {t('Главная страница')}
             <RatingCard
-                title="Vash fedback"
-                feedbackTitle="Ostavb otziv"
+                title="Ваш ответ"
+                feedbackTitle="Оставь отзыв"
                 hasFeedback
             />
         </Page>
