@@ -4,7 +4,7 @@ import { NavigateOptions } from 'react-router/dist/lib/context';
 import { CombinedState, Reducer } from 'redux';
 import { counterReducer } from '@/entities/Counter';
 import { userReducer } from '@/entities/User';
-import { createReducerManager } from '@/app/providers/StoreProvider/config/reducerManager';
+import { createReducerManager } from '../config/reducerManager';
 import { $api } from '@/shared/api/api';
 import { uiReducer } from '@/features/UI';
 import { rtkApi } from '@/shared/api/rtkApi';
