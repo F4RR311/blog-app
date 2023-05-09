@@ -3,7 +3,7 @@ import { useSelector } from 'react-redux';
 import { useSearchParams } from 'react-router-dom';
 import { ArticleList } from '@/entities/Article';
 import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch/useAppDispatch';
-import { Text, TextSize } from '@/shared/ui/Text';
+import { Text } from '@/shared/ui/Text';
 import { getArticles } from '../../model/slices/articlePageSlice';
 import {
     getArticlesPageError,

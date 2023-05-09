@@ -1,5 +1,5 @@
 import { useTranslation } from 'react-i18next';
-import { memo, Suspense } from 'react';
+import { memo } from 'react';
 import { useParams } from 'react-router-dom';
 import { ArticleRating } from '@/features/articleRating';
 import { ArticleDetails } from '@/entities/Article';

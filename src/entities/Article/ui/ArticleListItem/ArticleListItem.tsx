@@ -1,5 +1,5 @@
 import { useTranslation } from 'react-i18next';
-import { HTMLAttributeAnchorTarget, useCallback } from 'react';
+import { HTMLAttributeAnchorTarget } from 'react';
 import { RoutePath } from '@/shared/const/router';
 import { classNames } from '@/shared/lib/classNames/classNames';
 import { Text } from '@/shared/ui/Text';
