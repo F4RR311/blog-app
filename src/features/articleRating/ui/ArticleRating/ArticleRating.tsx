@@ -2,7 +2,7 @@ import { useTranslation } from 'react-i18next';
 import { useSelector } from 'react-redux';
 import { useCallback } from 'react';
 import { getUserAuthData } from '@/entities/User';
-import { Skeleton } from '@/shared/ui/skeleton/Skeleton';
+import { Skeleton } from '@/shared/ui/skeleton';
 import { useGetArticleRating, useRAteArticle } from '../../api/articleRatingApi';
 import { RatingCard } from '@/entities/Rating';
 
