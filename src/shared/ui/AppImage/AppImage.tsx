@@ -20,6 +20,10 @@ export const AppImage = (props: AppImageProps) => {
         img.onload = () => {
             setIsLoading(false);
         };
+        img.onerror = () => {
+            setIsLoading(false);
+            setHasError(true);
+        };
     }, [src]);
 
     if (isLoading && fallback) {

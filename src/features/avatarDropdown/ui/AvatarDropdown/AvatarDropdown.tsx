@@ -49,7 +49,7 @@ export const AvatarDropdown = (props: AvatarDropdownProps) => {
                     href: getRouteProfile(authData.id),
                 },
             ]}
-            trigger={<Avatar size={30} src={authData.avatar} />}
+            trigger={<Avatar fallbackInverted size={30} src={authData.avatar} />}
         />
 
     );
