@@ -63,7 +63,7 @@ npm run start:dev или npm run start:dev:vite - запуск сервера + 
 
 Подробнее о тестах - [документация тестирование](/docs/tests.md)
 
-----
+ 
 
 ## Линтинг
 
